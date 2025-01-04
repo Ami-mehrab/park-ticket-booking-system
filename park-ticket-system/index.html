@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Park Ticket Booking System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Park Ticket Booking System</h1>
+  </header>
+
+  <main>
+    <section id="role-selection">
+      <h2>Select Your Role</h2>
+      <button onclick="showLogin('visitor')">Visitor</button>
+      <button onclick="showLogin('ranger')">Ranger</button>
+      <button onclick="showLogin('admin')">Admin</button>
+    </section>
+
+    <!-- Login and Sign-up Forms -->
+    <section id="login-signup" class="hidden">
+      <h2 id="role-title">Login / Sign-up</h2>
+      <div class="form-container">
+        <!-- Login Form -->
+        <form id="login-form">
+          <h3>Login</h3>
+          <label for="login-email">Email:</label>
+          <input type="email" id="login-email" placeholder="Enter your email" required>
+          <label for="login-password">Password:</label>
+          <input type="password" id="login-password" placeholder="Enter your password" required>
+          <button type="submit" onclick="handleLogin(event)">Login</button>
+        </form>
+
+        <!-- Sign-up Form -->
+        <form id="signup-form">
+          <h3>Sign-up</h3>
+          <label for="signup-name">Name:</label>
+          <input type="text" id="signup-name" placeholder="Enter your name" required>
+          <label for="signup-email">Email:</label>
+          <input type="email" id="signup-email" placeholder="Enter your email" required>
+          <label for="signup-password">Password:</label>
+          <input type="password" id="signup-password" placeholder="Enter your password" required>
+          <button type="submit" onclick="handleSignUp(event)">Sign-up</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Park Ticket Booking System</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
